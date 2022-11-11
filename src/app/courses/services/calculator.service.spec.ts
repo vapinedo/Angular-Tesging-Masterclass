@@ -17,7 +17,7 @@ describe('CalculatorService', () => {
         calculator = TestBed.inject(CalculatorService);
     });
 
-    fit('should add two numbers', () => {
+    it('should add two numbers', () => {
         const result = calculator.add(2,2);
         expect(result).toBe(4);
         expect(loggerSpy.log).toHaveBeenCalledTimes(1);
