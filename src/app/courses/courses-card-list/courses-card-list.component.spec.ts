@@ -10,14 +10,23 @@ import {setupCourses} from '../common/setup-test-data';
 
 
 describe('CoursesCardListComponent', () => {
-  beforeEach(() => {
+  let component: CoursesCardListComponent;
+  let fixture: ComponentFixture<CoursesCardListComponent>;
+
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [CoursesModule]
+    })
+    .compileComponents()
+    .then(() => {
+      fixture = TestBed.createComponent(CoursesCardListComponent);
+      component = fixture.componentInstance;
     });
-  });
+  }));
   
   it("should create the component", () => {
-    
+    expect(component).toBeTruthy();
+    console.log(component);
   });
 
 
@@ -34,5 +43,5 @@ describe('CoursesCardListComponent', () => {
 
   });
 });
-
+ 
 
