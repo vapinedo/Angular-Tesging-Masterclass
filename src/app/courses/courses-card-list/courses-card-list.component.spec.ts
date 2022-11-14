@@ -9,15 +9,15 @@ import {Course} from '../model/course';
 import {setupCourses} from '../common/setup-test-data';
 
 
-
-
 describe('CoursesCardListComponent', () => {
-
-
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [CoursesModule]
+    });
+  });
+  
   it("should create the component", () => {
-
-   pending();
-
+    
   });
 
 
@@ -33,8 +33,6 @@ describe('CoursesCardListComponent', () => {
       pending();
 
   });
-
-
 });
 
 
